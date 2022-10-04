@@ -1,6 +1,6 @@
 % Source of composition: https://colorhunt.co/palette/f5efe6e8dfcaaebdca7895b2
 \definecolor{greyBlue}{HTML}{7895B2}
-\definecolor{midBlue}{HTML}{AEBDCA}
+\definecolor{lightBlue}{HTML}{AEBDCA}
 \definecolor{beige}{HTML}{E8DFCA}
 \definecolor{lightBeige}{HTML}{F5EFE6}
 % RED!
@@ -11,7 +11,7 @@
 %% Palette:
 \setbeamercolor{palette primary}{fg=white, bg=greyBlue} % Default: right bottom field
 % > Used for frame headings, title heading, title in footbar
-\setbeamercolor{palette secondary}{fg=white, bg=midBlue} % Default: left bottom field
+\setbeamercolor{palette secondary}{fg=white, bg=lightBlue} % Default: left bottom field
 % > Used for author and date in footer, example blocks
 \setbeamercolor{palette tertiary}{fg=black, bg=beige} % Mid bottom and top field
 % > Used for basic blocks
@@ -21,6 +21,7 @@
 %% Title & Heading: - somehow does not work with parents={palette primary}
 \setbeamercolor{titlelike}{bg=greyBlue, fg=white}
 \setbeamercolor{frametitle}{bg=greyBlue, fg=white}
+\setbeamercolor{author}{bg=beige}
 
 %% Boxes:
 \setbeamercolor{block title}{parent={palette 	 tertiary}}
@@ -36,4 +37,10 @@
 
 \setbeamercolor{title in head/foot}{parent={palette primary}}
 \setbeamercolor{date in head/foot}{parent={palette secondary}}
-\setbeamercolor{page number in head/foot}{fg=black}
+
+%% Minor tinkering
+\setbeamercolor{page number in head/foot}{fg=greyBlue}
+\setbeamercolor{itemize item}{fg=lightBlue}
+\setbeamercolor{subsection in toc}{fg=greyBlue}
+\setbeamercolor{lower separation line head}{parent={palette secondary}}
+%\setbeamercolor{subsubsection in toc}{fg=lightBlue}
