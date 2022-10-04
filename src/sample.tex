@@ -1,0 +1,82 @@
+\section{Examples}
+\subsection{Basic}
+
+\begin{frame}
+	\frametitle{Lipsum}
+	\centering
+	\lipsum[1]
+\end{frame}
+
+\begin{frame}
+	\frametitle{Blocks}
+	\begin{block}{Normal Block}
+		I'm a normal bock!
+	\end{block}
+	\begin{exampleblock}{Example Block}
+		I'm an example bock!
+	\end{exampleblock}
+	\begin{alertblock}{Alert Block}
+		I'm a alert bock!
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}{Multiple Columns}
+    \begin{columns}[c]
+        \column{.45\textwidth}
+        \begin{enumerate}
+            \item Statement
+            \item Explanation
+            \item Example
+        \end{enumerate}
+
+        \column{.5\textwidth}
+        \begin{itemize}
+			\item Item 1
+			\item Item 2
+			\item Item 3
+		\end{itemize}
+
+    \end{columns}
+\end{frame}
+
+\subsection{Advanced}
+
+\begin{frame}{TM}
+	$$M = (Z,\Sigma,\Gamma,\delta,z_0,\square,F)$$
+\end{frame}
+
+\begin{frame}{Tabelle}
+	\centering
+	\begin{table}
+		\begin{tabular}{c c c}
+			\toprule
+			\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2} \\
+			\midrule
+			Treatment 1         & 0.0003262           & 0.562               \\
+			Treatment 2         & 0.0015681           & 0.910               \\
+			Treatment 3         & 0.0009271           & 0.296               \\
+			\bottomrule
+		\end{tabular}
+		\caption{Table caption}
+	\end{table}
+\end{frame}
+
+\subsection{Citation}
+
+\begin{frame}[Citation]
+    \frametitle{Citation}
+    An example of the \enquote{cite} command to cite within the presentation:\\~
+
+    This statement requires citation \cite{p1}.
+\end{frame}
+
+\begin{frame}{References}
+    % Beamer does not support BibTeX so references must be inserted manually as below
+    \footnotesize{
+        \begin{thebibliography}{99}
+            \bibitem[Smith, 2012]{p1} John Smith (2012)
+            \newblock Title of the publication
+            \newblock \emph{Journal Name} 12(3), 45 -- 678.
+        \end{thebibliography}
+    }
+\end{frame}
