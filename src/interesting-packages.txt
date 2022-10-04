@@ -1,0 +1,16 @@
+Templates:
+https://ctan.org/pkg/beamercolorthemeowl
+https://ctan.org/pkg/beamertheme-metropolis ***
+https://ctan.org/pkg/beamertheme-light
+https://ctan.org/pkg/beamertheme-cuerna ***
+https://ctan.org/pkg/beamerthemeamurmaple **
+https://ctan.org/pkg/thubeamer ***
+https://ctan.org/pkg/bfh-ci
+https://ctan.org/pkg/beamertheme-upenn-bc **
+https://ctan.org/pkg/beamertheme-simpledarkblue <
+
+
+Functions:
+https://ctan.org/pkg/texpower ***
+https://ctan.org/pkg/handoutwithnotes *** Funktioniert nicht mit Table of Contents
+https://ctan.org/pkg/clicks **?

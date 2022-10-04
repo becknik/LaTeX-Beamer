@@ -1,0 +1,60 @@
+%% Taken from: https://ctan.org/pkg/beamertheme-simpledarkblue
+
+\mode<presentation>
+
+\setbeamerfont{structure}{family=\sffamily,series=\mdseriesi}
+
+\setbeamerfont{title}{size=\LARGE,parent=structure}
+\setbeamerfont{subtitle}{size=\normalsize,parent=title}
+
+\setbeamerfont{date}{size=\scriptsize,series=\mdseries,parent=structure}
+\setbeamerfont{author}{size=\Large,series=\mdseries,parent=structure}
+\setbeamerfont{institute}{size=\scriptsize,series=\mdseries,parent=structure}
+
+\setbeamerfont{section in toc}{size=\Large,parent=structure}
+\setbeamerfont{section in head/foot}{size=\tiny,parent=structure}
+\setbeamerfont{subsection in toc}{size=\large,parent={section in toc}}
+
+\setbeamerfont{frametitle}{parent=structure,size=\LARGE}
+\setbeamerfont{framesubtitle}{parent=frametitle,size=\Large}
+
+\setbeamerfont{caption}{size=\footnotesize}
+\setbeamerfont{item}{parent=structure,series=\mdseries}
+\setbeamerfont{block title}{size=\large,series=\mdseries,parent={structure,block body}}
+
+\mode
+<all>
+
+
+
+\definecolor{InvisibleRed}{rgb}{0.92, 0.9, 0.9}
+\definecolor{InvisibleGreen}{rgb}{0.9, 0.92, 0.9}
+\definecolor{InvisibleBlue}{rgb}{0.9, 0.9, 0.92}
+
+\definecolor{LightBlue}{rgb}{0.4, 0.55, 0.65}
+
+\definecolor{MediumRed}{rgb}{0.92549, 0.34509, 0.34509}
+\definecolor{MediumGreen}{rgb}{0.36862, 0.66666, 0.65882}
+\definecolor{MediumBlue}{rgb}{0.01176, 0.31372, 0.43529}
+
+\definecolor{DarkBlue}{rgb}{0.05, 0.15, 0.3}
+
+\usecolortheme[named=DarkBlue]{structure}
+
+\setbeamercolor{palette primary}{bg=DarkBlue,fg=white}
+\setbeamercolor{palette secondary}{bg=MediumBlue,fg=white}
+\setbeamercolor{palette tertiary}{bg=LightBlue,fg=white}
+\setbeamercolor{block title}{bg=MediumBlue}
+\setbeamercolor{block body}{bg=InvisibleBlue}
+\setbeamercolor{block title example}{bg=MediumGreen}
+\setbeamercolor{block body example}{bg=InvisibleGreen}
+\setbeamercolor{block title alerted}{bg=MediumRed}
+\setbeamercolor{block body alerted}{bg=InvisibleRed}
+
+
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{enumerate items}[default]
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}[default]
+
+\mode<all>

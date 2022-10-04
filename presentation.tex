@@ -1,0 +1,71 @@
+\documentclass[compress,16pt,xcolor=dvipsnames,aspectratio=1610]{beamer}	% handout
+\input{src/packages.tex}
+\def\github{https://github.com/jarnnk/LaTeX-Beamer-Template}
+\input{src/beamertheme.sty}
+\input{src/beamercolortheme.sty}
+
+\title[Übungsgruppe 14]{Tutorium 1}
+\subtitle[]{Programmierung und Softwareentwicklung}
+\author[Jannik Becker]{\href{https://github.com/jarnnk}{Jannik Becker}}
+\date[WS 2022]{\today}
+
+\begin{document}
+	\frame{\titlepage}
+
+	\begin{frame}
+		\frametitle{Gliederung}
+		\tableofcontents
+	\end{frame}
+
+	\AtBeginSection{
+		\begin{frame}
+			\frametitle{Gliederung}
+			\tableofcontents[currentsection]
+		\end{frame}
+	}
+
+	\section[Sec]{Section}
+
+	\section*{Abschluss}\makethanks
+\end{document}
+
+
+%% Useful beamer things:
+
+%		\begin{itemize}
+%			\item<1-> Text visible on slide 1
+%			\item<2> Text visible on slide 2 and not on 3
+%			\item<3-> Text visible on slide 3
+%		\end{itemize}
+
+%% QR-Code generation:
+%	\vskip1cm\hspace*{\fill}\qrcode[height=1.5cm,level=Q]{}\hspace*{1cm}
+
+
+%		\begin{block}{}
+%			text
+%		\end{block}
+
+%		\begin{alertblock}{}
+%			text
+%		\end{alertblock}
+
+%		\begin{examples}{}
+%			text
+%		\end{examples}
+
+%		\section{}
+%
+%		\AtBeginSection[] {
+%			\begin{frame}
+%				\frametitle{Gliederung}
+%				\tableofcontents[currentsection]
+%			\end{frame}
+%		}
+
+%	\begin{columns}
+%		\column{0.5\textwidth}
+%		text
+%		\column{0.5\textwidth}
+%		text
+%	\end{columns}

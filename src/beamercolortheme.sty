@@ -1,0 +1,39 @@
+
+\definecolor{deepBlue}{HTML}{1A374D}
+\definecolor{midBlue}{HTML}{406882}
+\definecolor{lightBlue}{HTML}{6998AB}
+\definecolor{lightLightBlue}{HTML}{B1D0E0}
+\definecolor{darkGreen}{HTML}{3D8361}
+\definecolor{darkRed}{HTML}{CC3636}
+
+\usecolortheme[named=deepBlue]{structure}
+
+% parent=
+\setbeamercolor{titlelike}{bg=deepBlue, fg=white}
+\setbeamercolor{frametitle}{bg=deepBlue, fg=white}
+
+%% Palette:
+\setbeamercolor{palette primary}{fg=white, bg=deepBlue} % Right bottom field
+\setbeamercolor{palette secondary}{fg=white, bg=midBlue} % Lef bottom field
+\setbeamercolor{palette tertiary}{fg=white, bg=lightBlue} % Mid bottom and top field
+\setbeamercolor{palette quaternary}{fg=white, bg=lightLightBlue}
+
+%% Boxes:
+\setbeamercolor{block title}{parent={palette tertiary}}
+\setbeamercolor{block body}{use={palette tertiary}, bg=palette tertiary.bg!10!white}
+\setbeamercolor{block title example}{fg=white, bg=darkGreen}
+\setbeamercolor{block body example}{use={block title example}, bg=block title example.bg!10!white}
+\setbeamercolor{block title alerted}{fg=white, bg=darkRed}
+\setbeamercolor{block body alerted}{use={block title alerted}, bg=block title alerted.bg!10!white}
+
+%% Playing around with coloring needlessly:
+\setbeamercolor*{mini frame}{fg=white, bg=midBlue}
+\setbeamercolor{section in head/foot}{parent={mini frame}}
+
+\setbeamercolor{title in head/foot}{parent={palette primary}}
+%\setbeamercolor{title in head/foot}{parent={normal text}}
+\setbeamercolor{date in head/foot}{parent={palette secondary}}
+
+%\setbeamercolor{author in head/foot}{parent={normal text}}
+%\setbeamercolor{title in head/foot}{parent={palette secondary}}
+%\setbeamercolor{date in head/foot}{parent={normal text}}
