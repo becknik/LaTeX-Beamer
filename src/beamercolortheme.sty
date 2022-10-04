@@ -1,39 +1,39 @@
-
-\definecolor{deepBlue}{HTML}{1A374D}
-\definecolor{midBlue}{HTML}{406882}
-\definecolor{lightBlue}{HTML}{6998AB}
-\definecolor{lightLightBlue}{HTML}{B1D0E0}
-\definecolor{darkGreen}{HTML}{3D8361}
+% Source of composition: https://colorhunt.co/palette/f5efe6e8dfcaaebdca7895b2
+\definecolor{greyBlue}{HTML}{7895B2}
+\definecolor{midBlue}{HTML}{AEBDCA}
+\definecolor{beige}{HTML}{E8DFCA}
+\definecolor{lightBeige}{HTML}{F5EFE6}
+% RED!
 \definecolor{darkRed}{HTML}{CC3636}
 
-\usecolortheme[named=deepBlue]{structure}
-
-% parent=
-\setbeamercolor{titlelike}{bg=deepBlue, fg=white}
-\setbeamercolor{frametitle}{bg=deepBlue, fg=white}
+\usecolortheme[named=greyBlue]{structure}
 
 %% Palette:
-\setbeamercolor{palette primary}{fg=white, bg=deepBlue} % Right bottom field
-\setbeamercolor{palette secondary}{fg=white, bg=midBlue} % Lef bottom field
-\setbeamercolor{palette tertiary}{fg=white, bg=lightBlue} % Mid bottom and top field
-\setbeamercolor{palette quaternary}{fg=white, bg=lightLightBlue}
+\setbeamercolor{palette primary}{fg=white, bg=greyBlue} % Default: right bottom field
+% > Used for frame headings, title heading, title in footbar
+\setbeamercolor{palette secondary}{fg=white, bg=midBlue} % Default: left bottom field
+% > Used for author and date in footer, example blocks
+\setbeamercolor{palette tertiary}{fg=black, bg=beige} % Mid bottom and top field
+% > Used for basic blocks
+\setbeamercolor{palette quaternary}{fg=black, bg=lightBeige}
+% > Used for nothing :)
+
+%% Title & Heading: - somehow does not work with parents={palette primary}
+\setbeamercolor{titlelike}{bg=greyBlue, fg=white}
+\setbeamercolor{frametitle}{bg=greyBlue, fg=white}
 
 %% Boxes:
-\setbeamercolor{block title}{parent={palette tertiary}}
+\setbeamercolor{block title}{parent={palette 	 tertiary}}
 \setbeamercolor{block body}{use={palette tertiary}, bg=palette tertiary.bg!10!white}
-\setbeamercolor{block title example}{fg=white, bg=darkGreen}
+\setbeamercolor{block title example}{parent={palette quaternary}}
 \setbeamercolor{block body example}{use={block title example}, bg=block title example.bg!10!white}
 \setbeamercolor{block title alerted}{fg=white, bg=darkRed}
 \setbeamercolor{block body alerted}{use={block title alerted}, bg=block title alerted.bg!10!white}
 
 %% Playing around with coloring needlessly:
-\setbeamercolor*{mini frame}{fg=white, bg=midBlue}
+\setbeamercolor*{mini frame}{fg=white, bg=greyBlue}
 \setbeamercolor{section in head/foot}{parent={mini frame}}
 
 \setbeamercolor{title in head/foot}{parent={palette primary}}
-%\setbeamercolor{title in head/foot}{parent={normal text}}
 \setbeamercolor{date in head/foot}{parent={palette secondary}}
-
-%\setbeamercolor{author in head/foot}{parent={normal text}}
-%\setbeamercolor{title in head/foot}{parent={palette secondary}}
-%\setbeamercolor{date in head/foot}{parent={normal text}}
+\setbeamercolor{page number in head/foot}{fg=black}
