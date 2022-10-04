@@ -1,19 +1,52 @@
 \mode<presentation>
 
-%% Settings:
+%% General settings:
 \usetheme{CambridgeUS}
-\useoutertheme[subsection=false]{miniframes}	% When setting =true: compress as beamer option for subsection bar to not take to mutch space
+\useoutertheme[subsection=false]{miniframes}
+% When setting section=true: compress as beamer option for subsection bar to minimize space
 
-%% Source: https://tex.stackexchange.com/questions/88182/beamer-miniframes-side-by-side-section-names-and-navigation-dots
+%% Miniframe dots adjustments:
+% source: https://tex.stackexchange.com/questions/88182/beamer-miniframes-side-by-side-section-names-and-navigation-dots
 \usepackage{etoolbox}
 \makeatletter
 \patchcmd{\slideentry}{\advance\beamer@tempdim by -.05cm}{\advance\beamer@tempdim by\beamer@vboxoffset\advance\beamer@tempdim by\beamer@boxsize\advance\beamer@tempdim by 1.2\pgflinewidth}{}{}
 \patchcmd{\slideentry}{\kern\beamer@tempdim}{\advance\beamer@tempdim by 2pt\advance\beamer@tempdim by\wd\beamer@sectionbox\kern\beamer@tempdim}{}{}
 \makeatother
 
+%% Modified \maketitle:
+\setbeamertemplate{author}[wd=0.5\hsize]
+% Options: series, shape, family
+\setbeamerfont{title}{parent=structure, size=\LARGE}
+\setbeamerfont{subtitle}{parent=structure, size=\normalsize, series=\bfseries}
+%\usebeamerfont{date}{parent=structure, size=\small}	% Seams to not work at all...
+
+%% Coloring:
+\input{src/beamercolortheme.sty}
+
+%% Setting custom background:
+% (I probaply need some better TikZ skills here...)
+%\setbeamertemplate{background}{
+%	\begin{tikzpicture}
+%		\tikzstyle{every node} = [draw, circle, fill=white, size=4pt, inner sep=0pt]
+%		\begin{scope}
+%			\node (A) at (0, 0) {};
+%			\node (B) at (1, 1) {};
+%			\node (C) at (1, 0) {};
+%			\node (D) at (1, 1) {};
+%		\end{scope}
+%		\begin{scope}
+%			\path (A) edge node {} (B);
+%		\end{scope}
+%	\end{tikzpicture}
+%}
+
+%% Changing icons:
 %\setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{section in toc}[circle]
 \setbeamertemplate{subsection in toc}[default]
+\setbeamertemplate{subsubsection in toc}[default]	% Please make no use of this sction type.
+\setbeamertemplate{itemize item}[circle]
+\setbeamertemplate{enumerate item}[arrow]
 
 %% Thanks page:
 \def\makethanks{
@@ -28,7 +61,7 @@
 		\vskip 0.5cm
 		\hspace*{\fill}
 		\begin{beamercolorbox}[shadow=true,rounded=true,sep=0.1cm,center,wd=0.75\hsize]{palette tertiary}
-			Link zum \LaTeX-\textit{Beamer}-Template auf \href{\github}{meinem GitHub}:\quad\color{black}\qrcode[height=1.5cm,level=Q]{\github}
+			Link zum \LaTeX-\textit{Beamer}-Template auf \href{\github}{GitHub}:\quad\color{black}\qrcode[height=1.5cm,level=Q]{\github}
 		\end{beamercolorbox}
 		\hspace*{\fill}
 	\end{frame}
