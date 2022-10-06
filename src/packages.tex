@@ -1,23 +1,28 @@
+%% Encoding, fonts & language(s):
 \usepackage{mmap}
-\usepackage[utf8]{inputenc}
+\usepackage[utf8x]{inputenc}
 \usepackage{lmodern}
 \usepackage[EU1,T1]{fontenc}
 \usepackage[ngerman]{babel}
-\usepackage{xcolor}
+\usepackage[style=german]{csquotes}
+
+% Japanese font support, works only with otf-ipafont installed
+\usepackage[ipa]{xeCJK}
+\setCJKsansfont{IPAGothic} % for \sffamily
+%\setCJKmainfont{IPAMincho} % for \rmfamily
 
 %% Basic packages:
-\usepackage[style=german]{csquotes}	% \enquote{}
 \usepackage{graphicx} \graphicspath{figures/}
 \usepackage[unicode]{hyperref}
+\usepackage{xcolor}
 \usepackage{mathtools}
 \usepackage{amssymb}
 \usepackage{wasysym}
+\usepackage{tikz}	% (Maybe) For background generation
 
 %% Beamer specific:
 \usepackage{qrcode}
 \usepackage{pgfpages}	% For handout generation
-
-\usepackage{tikz}	% (Maybe) For background generation
 
 %% Testing:
 \usepackage{lipsum}
