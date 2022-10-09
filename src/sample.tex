@@ -58,6 +58,25 @@
 	$$M = (Z,\Sigma,\Gamma,\delta,z_0,\square,F)$$
 \end{frame}
 
+\begin{frame}[fragile]{Example Java Sourcecode}
+	 \begin{block}{Java at it's best}
+		\begin{lstlisting}
+public class Candy {
+	 /*
+	 *@ public class invariant name != null
+	 * UNICODE: äöüß
+	 */
+
+	 // snip
+	 private String name;
+	 public boolean hasSameName(Candy that) {
+		 return this.name.equals(that.name);
+	 }
+ }
+		\end{lstlisting}
+	 \end{block}
+\end{frame}
+
 \begin{frame}{Tabelle}
 	\centering
 	\begin{table}
@@ -93,3 +112,5 @@
         \end{thebibliography}
     }
 \end{frame}
+
+\section[Test]{Proof that there is no failure in the tables of content}

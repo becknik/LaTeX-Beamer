@@ -1,20 +1,22 @@
 %% Encoding, fonts & language(s):
 \usepackage{mmap}
 \usepackage[utf8x]{inputenc}
-\usepackage{lmodern}
+\usepackage[nomath]{lmodern}
 \usepackage[EU1,T1]{fontenc}
 \usepackage[ngerman]{babel}
 \usepackage[style=german]{csquotes}
 
 % Japanese font support, works only with otf-ipafont installed
-\usepackage[ipa]{xeCJK}
+\usepackage{xeCJK}
 \setCJKsansfont{IPAGothic} % for \sffamily
 %\setCJKmainfont{IPAMincho} % for \rmfamily
 
 %% Basic packages:
 \usepackage{graphicx} \graphicspath{figures/}
-\usepackage[unicode]{hyperref}
-\usepackage{xcolor}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[hyperref,table,dvipsnames]{xcolor}
+\usepackage{listings}
 \usepackage{mathtools}
 \usepackage{amssymb}
 \usepackage{wasysym}
@@ -26,3 +28,38 @@
 
 %% Testing:
 \usepackage{lipsum}
+
+
+%% Listings setup:
+\definecolor{keywords}{HTML}{000080}
+\definecolor{types}{HTML}{000000}
+\definecolor{instances}{HTML}{660E7A}
+\definecolor{string}{rgb}{0.6,0,0}
+\definecolor{comments}{HTML}{606060}
+
+\lstset{
+	% Formatting
+	basicstyle={\ttfamily\small},
+	language=Java,
+	% Syntax Highlighting:
+	keywordstyle={\color{keywords}},
+	otherkeywords={},
+	keywordstyle=[2]{\itshape\color{types}},
+	keywords=[2]{
+		String,Main,Test,Integer,Long,Double,Char,List,Collections,Collections,Arrays,Array,
+		Candy
+	},
+	identifierstyle={\bfseries\color{instances}},
+	stringstyle={\color{string}},
+	commentstyle={\color{comments}},
+	morecomment=[l]{*},
+	% Code Lines formatting:
+	numbers=left,
+	numberstyle={\footnotesize\color{comments}},
+	stepnumber=1,
+	xleftmargin=20pt,
+	% Misc:
+	tabsize=4,
+	showspaces=false,
+	showstringspaces=false
+}
