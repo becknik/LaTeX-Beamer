@@ -1,9 +1,8 @@
 \mode<presentation>
 
-%% General settings:
 \usetheme{CambridgeUS}
-\useoutertheme[subsection=false]{miniframes}
-% When setting section=true: compress as beamer option for subsection bar to minimize space
+\useoutertheme[subsection=false]{miniframes}	% When setting section=true: remove compress as beamer param
+\usepackage{./src/beamercolortheme}	% Custom color theme
 
 %% Miniframe dots adjustments:
 % source: https://tex.stackexchange.com/questions/88182/beamer-miniframes-side-by-side-section-names-and-navigation-dots
@@ -14,14 +13,10 @@
 \makeatother
 
 %% Modified \maketitle:
-\setbeamertemplate{author}[wd=0.5\hsize]
 % Options: series, shape, family
 \setbeamerfont{title}{parent=structure, size=\LARGE}
 \setbeamerfont{subtitle}{parent=structure, size=\normalsize, series=\bfseries}
 %\usebeamerfont{date}{parent=structure, size=\small}	% Seams to not work at all...
-
-%% Coloring:
-\input{src/beamercolortheme.sty}
 
 %% Setting custom background:
 % (I probaply need some better TikZ skills here...)
@@ -44,7 +39,8 @@
 %\setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{section in toc}[circle]
 \setbeamertemplate{subsection in toc}[default]
-\setbeamertemplate{subsubsection in toc}[default]	% Please make no use of this sction type.
+% Please make no use of this sction type:
+%\setbeamertemplate{subsubsection in toc}[default]
 \setbeamertemplate{itemize item}[circle]
 \setbeamertemplate{enumerate item}[default]
 
@@ -73,3 +69,5 @@
     \pgfpagesuselayout{4 on 1}[a4paper]
     \setbeameroption{show notes}
 }
+
+\mode<all>
