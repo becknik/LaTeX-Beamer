@@ -28,6 +28,15 @@
 %% Testing:
 \usepackage{lipsum}
 
+%% Fix for white font using the \setbeameroption{show notes on second screen} option
+% source: https://github.com/josephwright/beamer/issues/337#issuecomment-896438488
+\makeatletter
+\def\beamer@framenotesbegin{
+  \usebeamercolor[fg]{normal text}
+  \gdef\beamer@noteitems{}
+  \gdef\beamer@notes{}
+}
+\makeatother
 
 %% Listings setup:
 \definecolor{keywords}{HTML}{000080}
