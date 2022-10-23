@@ -12,11 +12,14 @@
 \patchcmd{\slideentry}{\kern\beamer@tempdim}{\advance\beamer@tempdim by 2pt\advance\beamer@tempdim by\wd\beamer@sectionbox\kern\beamer@tempdim}{}{}
 \makeatother
 
-%% Modified \maketitle:
+%% Modifying \maketitle:
 % Options: series, shape, family
 \setbeamerfont{title}{parent=structure, size=\LARGE}
 \setbeamerfont{subtitle}{parent=structure, size=\normalsize, series=\bfseries}
 %\usebeamerfont{date}{parent=structure, size=\small}	% Seams to not work at all...
+
+%% Modifying beamer block:
+\setbeamerfont{block title}{size=\normalsize, series=\bfseries}
 
 %% Setting custom background:
 % (I probaply need some better TikZ skills here...)
@@ -38,11 +41,12 @@
 %% Changing icons:
 %\setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{section in toc}[circle]
-\setbeamertemplate{subsection in toc}[default]
-% Please make no use of this sction type:
+\setbeamertemplate{subsection in toc}[circle] % Does not work...
+% Make no use of subsubsctions due to glithes (?):
 %\setbeamertemplate{subsubsection in toc}[default]
 \setbeamertemplate{itemize item}[circle]
 \setbeamertemplate{enumerate item}[default]
+\setbeamertemplate{itemize subitem}[triangle]
 
 %% Thanks page:
 \def\makethanks{
@@ -52,13 +56,13 @@
 				\Large
 				ありがとうございました！\\
 				\vskip2pt
-				Vielen Dank für Eure Aufmerksamkeit!
+				\textbf{Noch Fragen?}
 			}
 		\end{beamercolorbox}
-		\vskip 0.5cm
+		\vskip 0.25cm
 		\hspace*{\fill}
 		\begin{beamercolorbox}[shadow=true,rounded=true,sep=0.1cm,center,wd=0.75\hsize]{palette tertiary}
-			Link zum \LaTeX-\textit{Beamer}-Template auf \href{\github}{GitHub}:\quad\color{black}\qrcode[height=1.5cm,level=Q]{\github}
+			\href{\github}{Link} zum \LaTeX-Beamer-Template:\quad\color{black}\qrcode[height=1.5cm,level=Q]{\github}
 		\end{beamercolorbox}
 		\hspace*{\fill}
 	\end{frame}
@@ -66,8 +70,8 @@
 
 %% Handout generation:
 \mode<handout>{
-    \pgfpagesuselayout{4 on 1}[a4paper]
-    \setbeameroption{show notes}
+	\pgfpagesuselayout{4 on 1}[a4paper]
+	\setbeameroption{show notes}
 }
 
 \mode<all>
