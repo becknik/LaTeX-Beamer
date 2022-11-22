@@ -1,60 +1,70 @@
 \mode<presentation>
 
-% Source of composition: https://colorhunt.co/palette/f5efe6e8dfcaaebdca7895b2
-\definecolor{greyBlue}{HTML}{7895B2}
-\definecolor{lightBlue}{HTML}{AEBDCA}
-\definecolor{beige}{HTML}{E8DFCA}
-\definecolor{lightBeige}{HTML}{F5EFE6}
+% Source of color composition: https://colorhunt.co/palette/f4eeffdcd6f7a6b1e1424874
+\definecolor{important-font-color}{HTML}{424874}
+
+\definecolor{primary-color}{HTML}{A6B1E1}
+\definecolor{secondary-color}{HTML}{DCD6F7}
+\definecolor{tertiary-color}{HTML}{F4EEFF}
+
 % RED!
 \definecolor{darkRed}{HTML}{CC3636}
 
-\usecolortheme[named=greyBlue]{structure}
+\usecolortheme[named=primary-color]{structure}
 
 %% Palette:
-\setbeamercolor{palette primary}{fg=white, bg=greyBlue} % Default: right bottom field
+\setbeamercolor{palette primary}{fg=important-font-color, bg=primary-color} % Default: right bottom field
 % > Used for frame headings, title heading, title in footbar
-\setbeamercolor{palette secondary}{fg=white, bg=lightBlue} % Default: left bottom field
+\setbeamercolor{palette secondary}{fg=important-font-color, bg=secondary-color} % Default: left bottom field
 % > Used for author and date in footer, example blocks
-\setbeamercolor{palette tertiary}{fg=black, bg=beige} % Mid bottom and top field
+\setbeamercolor{palette tertiary}{fg=black, bg=tertiary-color} % Mid bottom and top field
 % > Used for basic blocks
 \setbeamercolor{palette quaternary}{fg=black, bg=lightBeige}
 % > Used for nothing :)
 
 %% Title & Heading: - somehow does not work with parents={palette primary}
-\setbeamercolor{titlelike}{bg=greyBlue, fg=white}
-\setbeamercolor{frametitle}{bg=greyBlue, fg=white}
-\setbeamercolor{author}{bg=beige}
+\setbeamercolor{titlelike}{bg=primary-color, fg=important-font-color}
+\setbeamercolor{author}{bg=secondary-color, fg=important-font-color}
+\setbeamercolor{frametitle}{bg=primary-color, fg=white}
 
-%% Boxes:
-\setbeamercolor{block title}{parent={palette 	 tertiary}}
+%% Boxes:	TODO
+\setbeamercolor{block title}{parent={palette secondary}, fg=black}
 \setbeamercolor{block body}{use={palette tertiary}, bg=palette tertiary.bg!10!white}
-\setbeamercolor{block title example}{parent={palette quaternary}}
+\setbeamercolor{block title example}{parent={palette tertiary}, fg=black}
 \setbeamercolor{block body example}{use={block title example}, bg=block title example.bg!10!white}
 \setbeamercolor{block title alerted}{fg=white, bg=darkRed}
-\setbeamercolor{block body alerted}{use={block title alerted}, bg=block title alerted.bg!10!white}
+%\setbeamercolor{block body alerted}{use={block title alerted}, bg=block title alerted.bg!10!white}
 
 %% Playing around with coloring needlessly:
-\setbeamercolor*{mini frame}{fg=white, bg=greyBlue}
+\setbeamercolor*{mini frame}{fg=white, bg=primary-color}
 \setbeamercolor{section in head/foot}{parent={mini frame}}
 
-\setbeamercolor{title in head/foot}{parent={palette primary}}
-\setbeamercolor{date in head/foot}{parent={palette secondary}}
+\setbeamercolor{author in head/foot}{fg=primary-color, bg=white}
+\setbeamercolor{title in head/foot}{fg=important-font-color	, bg=white}
+\setbeamercolor{date in head/foot}{fg=primary-color, bg=white}
+
+\setbeamercolor{page number in head/foot}{fg=important-font-color}
+\setbeamercolor{lower separation line head}{bg=secondary-color}
 
 %% Minor tinkering
-\setbeamercolor{page number in head/foot}{fg=greyBlue}
-\setbeamercolor{itemize item}{fg=greyBlue}
-\setbeamercolor{itemize subitem}{fg=lightBlue}
-\setbeamercolor{enumerate item}{fg=greyBlue}
-\setbeamercolor{subsection in toc}{fg=greyBlue}
-\setbeamercolor{lower separation line head}{parent={palette secondary}}
+\setbeamercolor{itemize item}{fg=important-font-color}
+\setbeamercolor{itemize subitem}{fg=primary-color}
+\setbeamercolor{itemize subsubitem}{fg=primary-color}
+\setbeamercolor{enumerate item}{fg=important-font-color}
+\setbeamercolor{enumerate subitem}{fg=primary-color}
+\setbeamercolor{enumerate subsubitem}{fg=primary-color}
+\setbeamercolor{section in toc}{fg=black}	% Does not color the enum shape :(
+\setbeamercolor{subsection in toc}{fg=important-font-color}
+\setbeamercolor{caption name}{fg=important-font-color}
+%caption name
 
-\hypersetup{
+\hypersetup{	% TODO
 	colorlinks = true,
 	linkcolor =.,
 	anchorcolor =.,
 	citecolor =.,
 	filecolor =.,
-	urlcolor = greyBlue,
+	urlcolor = primary-color,
 	citebordercolor = 0 0 0,
 	filebordercolor = 0 0 0,
 	linkbordercolor = 0 0 0,

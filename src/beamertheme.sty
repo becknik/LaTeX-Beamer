@@ -45,8 +45,11 @@
 % Make no use of subsubsctions due to glithes (?):
 %\setbeamertemplate{subsubsection in toc}[default]
 \setbeamertemplate{itemize item}[circle]
+%\setbeamertemplate{itemize subsubitem}[triangle]
+\setbeamertemplate{itemize subitem}{\scriptsize$\blacktriangleright$}
+\setbeamertemplate{itemize subsubitem}{\large\bfseries\--}
 \setbeamertemplate{enumerate item}[default]
-\setbeamertemplate{itemize subitem}[triangle]
+\setbeamertemplate{enumerate subitem}[default]
 
 %% Thanks page:
 \def\makethanks{
@@ -61,8 +64,8 @@
 		\end{beamercolorbox}
 		\vskip 0.25cm
 		\hspace*{\fill}
-		\begin{beamercolorbox}[shadow=true,rounded=true,sep=0.1cm,center,wd=0.75\hsize]{palette tertiary}
-			\href{\github}{Link} zum \LaTeX-Beamer-Template:\quad\color{black}\qrcode[height=1.5cm,level=Q]{\github}
+		\begin{beamercolorbox}[shadow=true,rounded=true,sep=0.1cm,center,wd=0.66\hsize]{palette tertiary}
+			Mein \href{\github}{GitHub}:\quad\color{black}\qrcode[color=black,height=2cm,level=Q]{\github}
 		\end{beamercolorbox}
 		\hspace*{\fill}
 	\end{frame}
