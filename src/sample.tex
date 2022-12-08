@@ -77,18 +77,17 @@
 	 \begin{block}{Java at it's best}
 		\begin{lstlisting}
 public class Candy {
-	 /*
-	 *@ public class invariant name != null
-	 * UNICODE: äöüß
-	 */
+    /*
+    *@ public class invariant name != null
+    * UNICODE: äöüß
+    */
 
-	 // snip
-	 private String name;
-	 public boolean hasSameName(Candy that) {
-		 return this.name.equals(that.name);
-	 }
- }
-		\end{lstlisting}
+    // snip
+    private String name;
+    public boolean hasSameName(Candy that) {
+        return this.name.equals(that.name);
+    }
+}\end{lstlisting}
 	 \end{block}
 \end{frame}
 
