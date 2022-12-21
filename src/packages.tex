@@ -5,8 +5,9 @@
 \usepackage[ngerman]{babel}
 \usepackage[style=german]{csquotes}
 
-% Japanese font support, works only with otf-ipafont installed
-\usepackage{xeCJK}	% CJK package is automatically loaded in beamer?
+% Japanese font support, works only with my local font otf-ipafont installed
+% Futhermore, this seems to fix the ß being printed as SS (just accepting it...)
+\usepackage{xeCJK}
 \setCJKsansfont{IPAGothic} % for \sffamily
 %\setCJKmainfont{IPAMincho} % for \rmfamily
 
@@ -24,6 +25,7 @@
 %% Beamer specific:
 \usepackage{qrcode}
 \usepackage{pgfpages}	% For handout generation & notes support
+\usepackage{bookmark}	% XeLaTeX recommendation for better compliance?
 
 %% Testing:
 \usepackage{lipsum}
