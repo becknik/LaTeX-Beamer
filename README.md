@@ -12,3 +12,5 @@ When intending to use `pdflatex` or `latexmk`, consider commenting out the `\use
 
 ## Whats Currently Not Working:
 - [ ] Citation & I have no intention fixing it because no eager need...
+- [ ] No metter what I tried, the `lstlisting` converts tabs to weird looking symbol compositions
+
