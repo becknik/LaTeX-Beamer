@@ -1,16 +1,20 @@
-\documentclass[compress, 16pt, aspectratio=1610,	utf8, noamsthm, xcolor=dvipsnames,xcolor=tables,xcolor=hyperref,hyperref=unicode]{beamer}	% handout
+\documentclass[compress, 16pt, aspectratio=1610,	utf8, noamsthm, xcolor=dvipsnames,xcolor=tables,xcolor=hyperref,hyperref=unicode]{beamer}	% TODO handout
+							% Add the handout parameters ito the subscript braces to generate nicely formatted 2 in 1 handouts
+
+%% Definitions:
 \def\github{https://github.com/becknik/}
 \def\mail{\href{mailto:st177878@stud.uni-stuttgart.de}{E-Mail~}}
 \def\semester{WS 22/23}
+\def\tutNR{X} % TODO
 
-\def\tutNR{X}
-%\setbeameroption{show notes on second screen}
 
+% Importing packages:
 \input{src/packages.tex}
 \usepackage{./src/beamertheme}
+%\setbeameroption{show notes on second screen}	% This is different from handout generation
 
-\usebeamerfont{firacode}
 
+%% Setting up title page:
 \title[Übungsgr. 14 - Tutorium \tutNR]{Tutorium \tutNR}
 \subtitle[PSE]{Programmierung und Softwareentwicklung}
 \author{Jannik Becker}
@@ -20,31 +24,37 @@
 \begin{document}
 	\frame{\titlepage}
 
-	\begin{frame}{Gliederung}
-		\tableofcontents
-	\end{frame}
-
-	\AtBeginSection{
+	\mode<beamer>{
 		\begin{frame}{Gliederung}
-			\tableofcontents[currentsection]
+			\tableofcontents
 		\end{frame}
-	}
 
-	\AtBeginSubsection{
-		\begin{frame}{Gliederung}
-			\tableofcontents[currentsubsection]
-		\end{frame}
+		\AtBeginSection{
+			\begin{frame}{Gliederung}
+				\tableofcontents[currentsection]
+			\end{frame}
+		}
+
+		\AtBeginSubsection{
+			\begin{frame}{Gliederung}
+				\tableofcontents[currentsubsection]
+			\end{frame}
+		}
 	}
 
 	\input{src/sample.tex}
 
-	%\section[]{Korrektur}
+	\input{contents.tex}	% Using this might be more tidy & decrease redundancy
+
+
+	%\section[]{}
 	%\subsection[]{}
 
 
-
-	\section*{Abschluss}
-	\makethanks
+	\mode<beamer>{
+		\section*{Abschluss}
+		\makethanks
+	}
 \end{document}
 
 
